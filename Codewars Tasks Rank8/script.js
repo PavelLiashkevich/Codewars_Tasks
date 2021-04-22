@@ -1,4 +1,5 @@
-// 1.Very simple, given a number, find its opposite.
+// 1. Opposite number
+// Very simple, given a number, find its opposite.
 
 // Examples:
 // 1: -1
@@ -9,7 +10,8 @@ function opposite(number) {
 	return number *= -1;
 }
 
-// 2. Your task is to create a function that does four basic mathematical operations.
+// 2. Basic Mathematical Operations 
+// Your task is to create a function that does four basic mathematical operations.
 // The function should take three arguments - operation(string/char), value1(number), value2(number).
 // The function should return result of numbers after applying the chosen operation.
 
@@ -34,7 +36,8 @@ function basicOp(operation, value1, value2) {
   	}	
 }
 
-// 3. Input: Array of elements:
+// 3. Printing Array elements with Comma delimiters 
+// Input: Array of elements:
 // ["h","o","l","a"]
 // Output: String with comma delimited elements of the array in th same order.
 // "h,o,l,a"
@@ -43,9 +46,8 @@ function printArray(array){
 	return array.join(',');
 }
 
-
-
-// 4. Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total.
+// 4. Transportation on vacation 
+// Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total.
 // Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
 // Write a code that gives out the total amount for different days(d).
 
@@ -58,7 +60,9 @@ function rentalCarCost(d) {
 	  return cost * d - 20;
 	} else return cost * d;
 }
-// 5. You are going to be given a word. Your job is to return the middle character of the word. 
+
+// 5. Get the Middle Character 
+// You are going to be given a word. Your job is to return the middle character of the word. 
 // If the word's length is odd, return the middle character. 
 // If the word's length is even, return the middle 2 characters.
 
@@ -75,4 +79,35 @@ function getMiddle(s) {
 	} else {
 	  return s[mid];
 	}
+}
+
+// 6. Alan Partridge II - Apple Turnover 
+// Your job is simple, if (x) squared is more than 1000: 
+// return 'It's hotter than the sun!!', 
+// else - return 'Help yourself to a honeycomb Yorkie for the glovebox.'.
+
+function apple(x){
+	if (x ** 2 > 1000) {
+	  return 'It\'s hotter than the sun!!'
+	} else return 'Help yourself to a honeycomb Yorkie for the glovebox.'
+}
+
+
+// 7. String repeat
+// Write a function called repeatStr which repeats the given string string exactly n times.
+
+// #Examples:
+// repeatStr(6, "I") // "IIIIII"
+// repeatStr(5, "Hello") // "HelloHelloHelloHelloHello"
+
+// a)
+function repeatStr (n, s) {
+	return s.repeat(n);
+}
+// b) 
+function repeatStr (n, s) {
+	let str = '';
+	for (let i = 0; i < n; i++)
+		str += s;
+	  	return str;
 }
