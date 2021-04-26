@@ -23,17 +23,17 @@ function opposite(number) {
 
 function basicOp(operation, value1, value2) {
 	if (operation == "+") {
-    	return value1 + value2;
+		return value1 + value2;
 	}
-  	if (operation == "-") {
-    	return value1 - value2;
- 	}
-  	if (operation == "*") {
-    	return value1 * value2;
-  	}
-  	if (operation == "/") {
-    	return value1 / value2;
-  	}	
+	if (operation == "-") {
+		return value1 - value2;
+	}
+	if (operation == "*") {
+		return value1 * value2;
+	}
+	if (operation == "/") {
+		return value1 / value2;
+	}
 }
 
 // 3. Printing Array elements with Comma delimiters 
@@ -42,7 +42,7 @@ function basicOp(operation, value1, value2) {
 // Output: String with comma delimited elements of the array in th same order.
 // "h,o,l,a"
 
-function printArray(array){
+function printArray(array) {
 	return array.join(',');
 }
 
@@ -53,11 +53,11 @@ function printArray(array){
 
 function rentalCarCost(d) {
 	let cost = 40;
-	
+
 	if (d >= 7) {
-	  return cost * d - 50;
+		return cost * d - 50;
 	} else if (d >= 3) {
-	  return cost * d - 20;
+		return cost * d - 20;
 	} else return cost * d;
 }
 
@@ -75,9 +75,9 @@ function rentalCarCost(d) {
 function getMiddle(s) {
 	let mid = Math.floor(s.length / 2)
 	if (s.length % 2 == 0) {
-	  return s[mid - 1] + s[mid];
+		return s[mid - 1] + s[mid];
 	} else {
-	  return s[mid];
+		return s[mid];
 	}
 }
 
@@ -86,9 +86,9 @@ function getMiddle(s) {
 // return 'It's hotter than the sun!!', 
 // else - return 'Help yourself to a honeycomb Yorkie for the glovebox.'.
 
-function apple(x){
+function apple(x) {
 	if (x ** 2 > 1000) {
-	  return 'It\'s hotter than the sun!!'
+		return 'It\'s hotter than the sun!!'
 	} else return 'Help yourself to a honeycomb Yorkie for the glovebox.'
 }
 
@@ -101,13 +101,14 @@ function apple(x){
 // repeatStr(5, "Hello") // "HelloHelloHelloHelloHello"
 
 // a)
-function repeatStr (n, s) {
+function repeatStr(n, s) {
 	return s.repeat(n);
 }
 // b) 
-function repeatStr (n, s) {
+function repeatStr(n, s) {
 	let str = '';
 	for (let i = 0; i < n; i++)
 		str += s;
-	  	return str;
+	return str;
 }
+
