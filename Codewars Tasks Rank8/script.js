@@ -112,3 +112,51 @@ function repeatStr(n, s) {
 	return str;
 }
 
+
+// 8. Reversed Strings
+// Complete the solution so that it reverses the string passed into it.
+// 'world'  =>  'dlrow'
+
+// a)
+function solution(str) {
+	return str.split('').reverse().join('');
+}
+
+// b)
+function solution(str) {
+	let newStr = '';
+	for(let i = str.length - 1; i >= 0; i--) {
+	   newStr += str[i];
+	}
+	return newStr;
+}
+
+
+// 9. Drink about
+// Kids drink toddy.
+// Teens drink coke.
+// Young adults drink beer.
+// Adults drink whisky.
+// Make a function that receive age, and return what they drink.
+
+// Rules:
+// Children under 14 old.
+// Teens under 18 old.
+// Young under 21 old.
+// Adults have 21 or more.
+// Examples: (Input --> Output)
+
+// 13 --> "drink toddy"
+// 17 --> "drink coke"
+
+function peopleWithAgeDrink(old) {
+	if (old < 14) {
+	  return "drink toddy";
+	} else if (old < 18 && old >= 14) {
+	  return "drink coke";
+	} else if (old < 21 && old >= 18) {
+	  return "drink beer";
+	} else if (old >= 21) {
+	  return "drink whisky"
+	}
+};
