@@ -47,3 +47,50 @@ const printerError = s => {
 const getEvenNumbers = numbersArray => {
 	return numbersArray.filter(item => item % 2 === 0);
 };
+
+// 3. Sum of two lowest positive integers
+
+//Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+//For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+
+//[10, 343445353, 3453445, 3453545353453] should return 3453455.
+
+const sumTwoSmallestNumbers = numbers => {
+	const sortArr = numbers
+		.sort((a, b) => a - b)
+		.slice(0, 2)
+		.reduce((acc, item) => {
+			return acc + item;
+		}, 0);
+	return sortArr;
+};
+
+// 4. 16+18=214
+
+const add = (num1, num2) => {
+	num1 = ('' + num1).split('').reverse();
+	num2 = ('' + num2).split('').reverse();
+	let max = Math.max(num1.length, num2.length);
+	let str = [];
+	for (let i = 0; i < max; i++)
+		str.push((parseInt(num1[i]) || 0) + (parseInt(num2[i]) || 0));
+	num1 = str.reverse().join('');
+	return parseInt(num1);
+};
+
+// 5. Largest pair sum in array
+
+//Given a sequence of numbers, find the largest pair sum in the sequence.
+
+//For example
+//[10, 14, 2, 23, 19] -->  42 (= 23 + 19)
+//[99, 2, 2, 23, 19]  --> 122 (= 99 + 23)
+
+//Input sequence contains minimum two elements and every element is an integer.
+
+const largestPairSum = numbers => {
+	return numbers
+		.sort((a, b) => a - b)
+		.slice(-2)
+		.reduce((acc, item) => acc + item);
+};
